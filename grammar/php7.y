@@ -592,20 +592,24 @@ type:
 type_without_static:
       name
             { $$ = $this->handleBuiltinTypes($1); }
-    | T_ARRAY '<' generic_arg_list '>'
-            { $$ = Node\GenericIdentifier['array', $3]; }
-	| T_ARRAY '<' generic_arg_sr
-	        { init($3); $$ = Node\GenericIdentifier['array', $$]; }
-	| T_ARRAY '<' generic_arg_list ',' generic_arg_sr
-	        { push($3, $5); $$ = Node\GenericIdentifier['array', $$]; }
-    | T_ARRAY
-            { $$ = Node\Identifier['array']; }
+    | array_type '<' generic_arg_list '>'
+            { $$ = Node\GenericType[$1, $3]; }
+	| array_type '<' generic_arg_sr
+	        { init($3); $$ = Node\GenericType[$1, $$]; }
+	| array_type '<' generic_arg_list ',' generic_arg_sr
+	        { push($3, $5); $$ = Node\GenericType[$1, $$]; }
+    | array_type
+            { $$ = Node\Identifier[$1]; }
     | T_CALLABLE
             { $$ = Node\Identifier['callable']; }
 ;
 
+array_type:
+    T_ARRAY { $$ = Node\Identifier['array']; }
+;
+
 generic_arg_sr:
-    T_ARRAY '<' generic_arg_list T_SR { $$ = Node\GenericIdentifier['array', $3]; }
+    array_type '<' generic_arg_list T_SR { $$ = Node\GenericType[$1, $3]; }
 ;
 
 generic_arg_list:

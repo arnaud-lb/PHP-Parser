@@ -24,8 +24,10 @@ array(
                 attrGroups: array(
                 )
                 flags: 0
-                type: GenericIdentifier(
-                    name: array
+                type: GenericType(
+                    type: Identifier(
+                        name: array
+                    )
                     args: array(
                         0: Identifier(
                             name: int
@@ -61,14 +63,18 @@ array(
                 attrGroups: array(
                 )
                 flags: 0
-                type: GenericIdentifier(
-                    name: array
+                type: GenericType(
+                    type: Identifier(
+                        name: array
+                    )
                     args: array(
                         0: Identifier(
                             name: int
                         )
-                        1: GenericIdentifier(
-                            name: array
+                        1: GenericType(
+                            type: Identifier(
+                                name: array
+                            )
                             args: array(
                                 0: Identifier(
                                     name: int
@@ -106,20 +112,26 @@ array(
                 attrGroups: array(
                 )
                 flags: 0
-                type: GenericIdentifier(
-                    name: array
+                type: GenericType(
+                    type: Identifier(
+                        name: array
+                    )
                     args: array(
                         0: Identifier(
                             name: int
                         )
-                        1: GenericIdentifier(
-                            name: array
+                        1: GenericType(
+                            type: Identifier(
+                                name: array
+                            )
                             args: array(
                                 0: Identifier(
                                     name: int
                                 )
-                                1: GenericIdentifier(
-                                    name: array
+                                1: GenericType(
+                                    type: Identifier(
+                                        name: array
+                                    )
                                     args: array(
                                         0: Identifier(
                                             name: int
@@ -159,11 +171,15 @@ array(
                 attrGroups: array(
                 )
                 flags: 0
-                type: GenericIdentifier(
-                    name: array
+                type: GenericType(
+                    type: Identifier(
+                        name: array
+                    )
                     args: array(
-                        0: GenericIdentifier(
-                            name: array
+                        0: GenericType(
+                            type: Identifier(
+                                name: array
+                            )
                             args: array(
                                 0: Identifier(
                                     name: string
@@ -198,14 +214,20 @@ array(
                 attrGroups: array(
                 )
                 flags: 0
-                type: GenericIdentifier(
-                    name: array
+                type: GenericType(
+                    type: Identifier(
+                        name: array
+                    )
                     args: array(
-                        0: GenericIdentifier(
-                            name: array
+                        0: GenericType(
+                            type: Identifier(
+                                name: array
+                            )
                             args: array(
-                                0: GenericIdentifier(
-                                    name: array
+                                0: GenericType(
+                                    type: Identifier(
+                                        name: array
+                                    )
                                     args: array(
                                         0: Identifier(
                                             name: string
@@ -242,8 +264,10 @@ array(
                 attrGroups: array(
                 )
                 flags: 0
-                type: GenericIdentifier(
-                    name: array
+                type: GenericType(
+                    type: Identifier(
+                        name: array
+                    )
                     args: array(
                         0: Identifier(
                             name: int
@@ -279,11 +303,15 @@ array(
                 attrGroups: array(
                 )
                 flags: 0
-                type: GenericIdentifier(
-                    name: array
+                type: GenericType(
+                    type: Identifier(
+                        name: array
+                    )
                     args: array(
-                        0: GenericIdentifier(
-                            name: array
+                        0: GenericType(
+                            type: Identifier(
+                                name: array
+                            )
                             args: array(
                                 0: Identifier(
                                     name: int
