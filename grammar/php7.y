@@ -590,9 +590,27 @@ type:
 ;
 
 type_without_static:
-      name                                                  { $$ = $this->handleBuiltinTypes($1); }
-    | T_ARRAY                                               { $$ = Node\Identifier['array']; }
-    | T_CALLABLE                                            { $$ = Node\Identifier['callable']; }
+      name
+            { $$ = $this->handleBuiltinTypes($1); }
+    | T_ARRAY '<' generic_arg_list '>'
+            { $$ = Node\GenericIdentifier['array', $3]; }
+	| T_ARRAY '<' generic_arg_sr
+	        { init($3); $$ = Node\GenericIdentifier['array', $$]; }
+	| T_ARRAY '<' generic_arg_list ',' generic_arg_sr
+	        { push($3, $5); $$ = Node\GenericIdentifier['array', $$]; }
+    | T_ARRAY
+            { $$ = Node\Identifier['array']; }
+    | T_CALLABLE
+            { $$ = Node\Identifier['callable']; }
+;
+
+generic_arg_sr:
+    T_ARRAY '<' generic_arg_list T_SR { $$ = Node\GenericIdentifier['array', $3]; }
+;
+
+generic_arg_list:
+		type_expr                       { init($1); }
+	|	generic_arg_list ',' type_expr  { push($1, $3); }
 ;
 
 union_type_element:

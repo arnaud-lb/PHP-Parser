@@ -1,0 +1,231 @@
+Generic array types
+-----
+<?php
+
+function f1(array<int, string> $arr): void {}
+function f2(array<int, array<int, string>> $arr): void {}
+function f3(array<int, array<int, array<int, string>>> $arr): void {}
+function f4(array<array<string>> $arr): void {}
+function f5(array<array<array<string>>> $arr): void {}
+-----
+!!php7
+array(
+    0: Stmt_Function(
+        attrGroups: array(
+        )
+        byRef: false
+        name: Identifier(
+            name: f1
+        )
+        params: array(
+            0: Param(
+                attrGroups: array(
+                )
+                flags: 0
+                type: GenericIdentifier(
+                    name: array
+                    args: array(
+                        0: Identifier(
+                            name: int
+                        )
+                        1: Identifier(
+                            name: string
+                        )
+                    )
+                )
+                byRef: false
+                variadic: false
+                var: Expr_Variable(
+                    name: arr
+                )
+                default: null
+            )
+        )
+        returnType: Identifier(
+            name: void
+        )
+        stmts: array(
+        )
+    )
+    1: Stmt_Function(
+        attrGroups: array(
+        )
+        byRef: false
+        name: Identifier(
+            name: f2
+        )
+        params: array(
+            0: Param(
+                attrGroups: array(
+                )
+                flags: 0
+                type: GenericIdentifier(
+                    name: array
+                    args: array(
+                        0: Identifier(
+                            name: int
+                        )
+                        1: GenericIdentifier(
+                            name: array
+                            args: array(
+                                0: Identifier(
+                                    name: int
+                                )
+                                1: Identifier(
+                                    name: string
+                                )
+                            )
+                        )
+                    )
+                )
+                byRef: false
+                variadic: false
+                var: Expr_Variable(
+                    name: arr
+                )
+                default: null
+            )
+        )
+        returnType: Identifier(
+            name: void
+        )
+        stmts: array(
+        )
+    )
+    2: Stmt_Function(
+        attrGroups: array(
+        )
+        byRef: false
+        name: Identifier(
+            name: f3
+        )
+        params: array(
+            0: Param(
+                attrGroups: array(
+                )
+                flags: 0
+                type: GenericIdentifier(
+                    name: array
+                    args: array(
+                        0: Identifier(
+                            name: int
+                        )
+                        1: GenericIdentifier(
+                            name: array
+                            args: array(
+                                0: Identifier(
+                                    name: int
+                                )
+                                1: GenericIdentifier(
+                                    name: array
+                                    args: array(
+                                        0: Identifier(
+                                            name: int
+                                        )
+                                        1: Identifier(
+                                            name: string
+                                        )
+                                    )
+                                )
+                            )
+                        )
+                    )
+                )
+                byRef: false
+                variadic: false
+                var: Expr_Variable(
+                    name: arr
+                )
+                default: null
+            )
+        )
+        returnType: Identifier(
+            name: void
+        )
+        stmts: array(
+        )
+    )
+    3: Stmt_Function(
+        attrGroups: array(
+        )
+        byRef: false
+        name: Identifier(
+            name: f4
+        )
+        params: array(
+            0: Param(
+                attrGroups: array(
+                )
+                flags: 0
+                type: GenericIdentifier(
+                    name: array
+                    args: array(
+                        0: GenericIdentifier(
+                            name: array
+                            args: array(
+                                0: Identifier(
+                                    name: string
+                                )
+                            )
+                        )
+                    )
+                )
+                byRef: false
+                variadic: false
+                var: Expr_Variable(
+                    name: arr
+                )
+                default: null
+            )
+        )
+        returnType: Identifier(
+            name: void
+        )
+        stmts: array(
+        )
+    )
+    4: Stmt_Function(
+        attrGroups: array(
+        )
+        byRef: false
+        name: Identifier(
+            name: f5
+        )
+        params: array(
+            0: Param(
+                attrGroups: array(
+                )
+                flags: 0
+                type: GenericIdentifier(
+                    name: array
+                    args: array(
+                        0: GenericIdentifier(
+                            name: array
+                            args: array(
+                                0: GenericIdentifier(
+                                    name: array
+                                    args: array(
+                                        0: Identifier(
+                                            name: string
+                                        )
+                                    )
+                                )
+                            )
+                        )
+                    )
+                )
+                byRef: false
+                variadic: false
+                var: Expr_Variable(
+                    name: arr
+                )
+                default: null
+            )
+        )
+        returnType: Identifier(
+            name: void
+        )
+        stmts: array(
+        )
+    )
+)
